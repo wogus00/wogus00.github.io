@@ -2,35 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://wogus00.github.io/about/</loc>
+    <loc>http://wogus00.github.io/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/page/about/about/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wogus00.github.io/about/"
+                href="http://wogus00.github.io/"
                 />
   </url><url>
-    <loc>http://wogus00.github.io/page/archives/archives/</loc>
+    <loc>http://wogus00.github.io/page/about/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/page/archives/archives/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/page/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wogus00.github.io/page/archives/archives/"
+                href="http://wogus00.github.io/page/about/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/page/archives/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/page/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/page/archives/"
                 />
   </url><url>
     <loc>http://wogus00.github.io/categories/blog/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/categories/blog/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/blog/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -41,44 +53,20 @@
     <loc>http://wogus00.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/categories/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
                 href="http://wogus00.github.io/categories/"
-                />
-  </url><url>
-    <loc>http://wogus00.github.io/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wogus00.github.io/categories/"
-                />
-  </url><url>
-    <loc>http://wogus00.github.io/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wogus00.github.io/"
                 />
   </url><url>
     <loc>http://wogus00.github.io/categories/machine-learning/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/categories/machine-learning/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/machine-learning/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -89,8 +77,8 @@
     <loc>http://wogus00.github.io/page/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/page/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/page/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -98,23 +86,35 @@
                 href="http://wogus00.github.io/page/"
                 />
   </url><url>
-    <loc>http://wogus00.github.io/page/search/search/</loc>
+    <loc>http://wogus00.github.io/categories/personal/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/page/search/search/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/personal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wogus00.github.io/page/search/search/"
+                href="http://wogus00.github.io/categories/personal/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/page/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/page/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/page/search/"
                 />
   </url><url>
     <loc>http://wogus00.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="http://wogus00.github.io/kr/tags/"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
