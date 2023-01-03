@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Building blog with Hugo and Github Pages'>
+<title>Building Blog (1): Hugo and Github Pages</title>
+
+<link rel='canonical' href='http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Building Blog (1): Hugo and Github Pages'>
+<meta property='og:description' content='Building blog with Hugo and Github Pages'>
+<meta property='og:url' content='http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/'>
+<meta property='og:site_name' content='Jae&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='github-pages' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2023-01-03T13:54:48-05:00'/><meta property='article:modified_time' content='2023-01-03T13:54:48-05:00'/>
+<meta name="twitter:title" content="Building Blog (1): Hugo and Github Pages">
+<meta name="twitter:description" content="Building blog with Hugo and Github Pages">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu46a52821331dee46db575eaefb334f4e_192408_300x0_resize_box_3.png" width="300"
+                            height="279" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🇨🇦</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Jae&#39;s Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="http://wogus00.github.io/" selected>English</option>
+                        
+                            <option value="http://wogus00.github.io/ko/" >한국어</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#static-vs-dynamic-website">Static vs Dynamic Website</a>
+      <ol>
+        <li><a href="#hugo">Hugo</a></li>
+      </ol>
+    </li>
+    <li><a href="#installation">Installation</a>
+      <ol>
+        <li><a href="#hugo-and-git">Hugo and git</a></li>
+        <li><a href="#create-two-repositories">Create Two Repositories</a></li>
+      </ol>
+    </li>
+    <li><a href="#set-directory-structure">Set Directory Structure</a>
+      <ol>
+        <li><a href="#source-repository">Source repository</a></li>
+        <li><a href="#create-hugo-site">Create hugo site</a></li>
+        <li><a href="#set-submodule-for-deployment">Set submodule for deployment</a></li>
+      </ol>
+    </li>
+    <li><a href="#install-theme">Install Theme</a>
+      <ol>
+        <li><a href="#find-a-theme">Find a theme</a></li>
+        <li><a href="#install-the-theme">Install the theme</a></li>
+      </ol>
+    </li>
+    <li><a href="#make-new-contents">Make New Contents</a>
+      <ol>
+        <li><a href="#create-new-post">Create new post</a></li>
+        <li><a href="#test-on-local-server">Test on local server</a></li>
+      </ol>
+    </li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2023/build-blog-1/build-blog-1/">Building Blog (1): Hugo and Github Pages</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Building blog with Hugo and Github Pages
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 03, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="introduction">Introduction</h2>
+<p>Documentation of my learning has never been on my radar. Whenver I faced an issue, I would always focus on fixing it. Eventually, I forgot how I solved that issue, which made me repeat the process of googling for the solution. I recieved lots of help from other&rsquo;s tech blogs, so I decided to create my own blog for others and myself.</p>
+<p>I had three features that I wanted for my blog:</p>
+<ol>
+<li>Version Control</li>
+<li>Multilingual feature</li>
+<li>Simple and fast</li>
+</ol>
+<h2 id="static-vs-dynamic-website">Static vs Dynamic Website</h2>
+<blockquote>
+<p><code>Static</code> websites are sites with stable content, whereas <code>dynamic</code> websites pull contents with user requests. For the purpose of blogging, I didn&rsquo;t need features of dynamic website, so I decided to build my blog with static website generators.</p>
+</blockquote>
+<h3 id="hugo">Hugo</h3>
+<p>With little bit of research, I realized that there are three main static site generating platforms: <code>Jekyll</code>, <code>Hexo</code>, and <code>Hugo</code>.</p>
+<p>The three platforms have pros and cons, but I decided to use <code>Hugo</code> because it was fast and supported multilingual feature native.</p>
+<h2 id="installation">Installation</h2>
+<blockquote>
+<p>Please note that this post is based on Mac. For Windows and Linux systems, please refer to the <a class="link" href="https://gohugo.io/installation/"  target="_blank" rel="noopener"
+    >official website</a>.</p>
+</blockquote>
+<h3 id="hugo-and-git">Hugo and git</h3>
+<p>You can install hugo and git through package manger, homebrew. If you don&rsquo;t have homebrew installed, follow instructions on Homebrew&rsquo;s <a class="link" href="https://brew.sh/"  target="_blank" rel="noopener"
+    >website</a>. If homebrew is already installed, run the following command on terminal:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ brew install hugo
+</span></span><span class="line"><span class="cl">$ brew install git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="create-two-repositories">Create Two Repositories</h3>
+<p><strong>You need two remote repositories:</strong> one to store all source contents (<code>source repository</code>) and one to deploy the website (<code>deployment repositroy</code>).</p>
+<p>For <code>source repository</code>, you can name it anyway you prefer. I will create a repository called <code>blog-repo</code>.
+For <code>deployment repository</code>, you must name it as Github Pages reguires: <code>&lt;GITHUB USERNAME&gt;.github.io</code>.</p>
+<h2 id="set-directory-structure">Set Directory Structure</h2>
+<h3 id="source-repository">Source repository</h3>
+<p>On terminal, go to a desired directory and clone <code>source repository</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ git clone &lt;REPOSITORY-URL&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="create-hugo-site">Create hugo site</h3>
+<p>Now, change directory to <code>source repository</code> folder and createa Hugo project. Hugo supports <code>TOML</code>, <code>YAML</code>, and <code>JSON</code> files. Personally I am familiar with <code>YAML</code> files, so I created my project based on <code>YAML</code>. If you are not sure, go to your choice of theme&rsquo;s (explained later in this post) documentation and install their recommended version.</p>
+<p>On terminal, run the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd &lt;REPO-NAME&gt; # change directory
+</span></span><span class="line"><span class="cl">$ hugo new site &lt;PROJECT-NAME&gt; -f yaml # create hugo site
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="set-submodule-for-deployment">Set submodule for deployment</h3>
+<p>Change directory to Hugo project&rsquo;s folder. Then set <code>deployment repository</code> as submodule. If <code>public</code> folder already exists, remove it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">cd</span> <span class="p">&lt;</span><span class="nc">SITE</span><span class="o">-</span><span class="nc">NAME</span><span class="p">&gt;</span> <span class="o">#</span> <span class="nv">change</span> <span class="nv">directory</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">rm</span> <span class="nv">public</span> <span class="o">#</span> <span class="k">if</span> <span class="nv">public</span> <span class="nv">folder</span> <span class="nv">already</span> <span class="nv">exists</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">master</span> <span class="p">&lt;</span><span class="nc">REPOSITORY</span><span class="o">-</span><span class="nc">URL</span><span class="p">&gt;</span> <span class="nv">public</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>To summarize the process until this point:</p>
+<ol>
+<li>Install Hugo and Git on local machine</li>
+<li>Create two remote repositories on Github</li>
+<li>Clone <code>source repository</code> to your local machine and create Hugo site.</li>
+<li>Set <code>deployment repository</code> as submodule inside Hugo project folder as <code>public</code></li>
+</ol>
+<h2 id="install-theme">Install Theme</h2>
+<blockquote>
+<p>Unlike WordPress or other blogging platform, user must customize all features inside the blog unless user sets a theme. This can be a benefit as user can fully customize the website, but for me, I do not have the knowledge to design a website and blogging is the main purpose, so I decided to use pre-built themes.</p>
+</blockquote>
+<h3 id="find-a-theme">Find a theme</h3>
+<p>Hugo&rsquo;s <a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >official website</a> shows all supported themes. In this post and blog, I am using <code>hugo-theme-stack</code>. For more information, visit the creator&rsquo;s [website]](<a class="link" href="https://stack.jimmycai.com/%29"  target="_blank" rel="noopener"
+    >https://stack.jimmycai.com/)</a>.</p>
+<h3 id="install-the-theme">Install the theme</h3>
+<p>Once you choose your theme, run the following command in the root directory of your hugo site:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you choose other theme, follow the installation guide for that theme. Next, open <code>config.yaml</code> file inside hugo site folder and add the following script:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">THEME: hugo-theme-stack
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="make-new-contents">Make New Contents</h2>
+<blockquote>
+<p>All contents must be created under <code>contents</code> folder.</p>
+</blockquote>
+<h3 id="create-new-post">Create new post</h3>
+<p>On terminal, run the following command to create a new post:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo new posts/YOUR-POST-NAME.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="test-on-local-server">Test on local server</h3>
+<p>Before deployment, build and test your website on your local machine. Go to the root directory and run the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo server -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>-D</code> will show posts in draft mode. Check your website on <code>localhost:1313</code> on your browser.</p>
+<h2 id="deployment">Deployment</h2>
+<p>Once you are ready to make your changes public, you need to deploy it through <code>deployment repository</code>. Change directory to root directory of Hugo site and run the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo -t &lt;THEME-NAME&gt; # THEME-NAME should be name in config file
+</span></span><span class="line"><span class="cl">$ cd public
+</span></span><span class="line"><span class="cl">$ git add --all
+</span></span><span class="line"><span class="cl">$ git commit -m &#39;MESSAGE&#39;
+</span></span><span class="line"><span class="cl">$ git push origin master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>hugo -t &lt;THEME-NAME&gt;</code> command will automatically build website inside <code>public</code> folder ready for deployment. Then you push <code>public</code> folder to <code>deployment repository</code>.</p>
+<h2 id="summary">Summary</h2>
+<p><img src="/img/2023/build-blog-1/blog-diagram.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="diagram"
+	
+	
+></p>
+<p>Above is a diagram of how I designed my blog. In next post, I will be making changes to <code>config.yaml</code> file for blog configurations.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+            <a href="/tags/github-pages/">github-pages</a>
+        
+            <a href="/tags/blog/">blog</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Jae&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

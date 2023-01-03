@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>hugo on Jae&#39;s Blog</title>
-        <link>http://wogus00.github.io/tags/hugo/</link>
-        <description>Recent content in hugo on Jae&#39;s Blog</description>
+        <title>Posts on Jae&#39;s Blog</title>
+        <link>http://wogus00.github.io/posts/</link>
+        <description>Recent content in Posts on Jae&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 03 Jan 2023 13:54:48 -0500</lastBuildDate><atom:link href="http://wogus00.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Jan 2023 13:54:48 -0500</lastBuildDate><atom:link href="http://wogus00.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Building Blog (1): Hugo and Github Pages</title>
         <link>http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/</link>
         <pubDate>Tue, 03 Jan 2023 13:54:48 -0500</pubDate>

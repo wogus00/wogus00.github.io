@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>github pages on Jae&#39;s Blog</title>
+        <title>github-pages on Jae&#39;s Blog</title>
         <link>http://wogus00.github.io/tags/github-pages/</link>
-        <description>Recent content in github pages on Jae&#39;s Blog</description>
+        <description>Recent content in github-pages on Jae&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 01 Jan 2023 21:56:59 -0500</lastBuildDate><atom:link href="http://wogus00.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Building My Blog (1): Hugo and Github Pages</title>
-        <link>http://wogus00.github.io/posts/en/2023/blog-build-1/blogging-with-hugo-and-github-pages/</link>
-        <pubDate>Sun, 01 Jan 2023 21:56:59 -0500</pubDate>
+        <lastBuildDate>Tue, 03 Jan 2023 13:54:48 -0500</lastBuildDate><atom:link href="http://wogus00.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Building Blog (1): Hugo and Github Pages</title>
+        <link>http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/</link>
+        <pubDate>Tue, 03 Jan 2023 13:54:48 -0500</pubDate>
         
-        <guid>http://wogus00.github.io/posts/en/2023/blog-build-1/blogging-with-hugo-and-github-pages/</guid>
-        <description>&lt;p&gt;In the past, I didn&amp;rsquo;t really consider documenting what I learned. I would always google my issues and only focused on fixing the issue. This became a problem because I would forget how to resolve the issue. This continued to happen, so I needed to document my learnings so I can go back for a reference.&lt;/p&gt;
-&lt;p&gt;Also, many other developer&amp;rsquo;s blogs helped me solve some issues, so some day, I hope I can contribute to other people as well.&lt;/p&gt;
-&lt;p&gt;I had few features that I wanted for my blog:&lt;/p&gt;
+        <guid>http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/</guid>
+        <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Documentation of my learning has never been on my radar. Whenver I faced an issue, I would always focus on fixing it. Eventually, I forgot how I solved that issue, which made me repeat the process of googling for the solution. I recieved lots of help from other&amp;rsquo;s tech blogs, so I decided to create my own blog for others and myself.&lt;/p&gt;
+&lt;p&gt;I had three features that I wanted for my blog:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Version Control&lt;/li&gt;
 &lt;li&gt;Multilingual feature&lt;/li&gt;
-&lt;li&gt;Simple&lt;/li&gt;
+&lt;li&gt;Simple and fast&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;static-website-vs-dynamic-website&#34;&gt;Static Website vs Dynamic Website&lt;/h2&gt;
+&lt;h2 id=&#34;static-vs-dynamic-website&#34;&gt;Static vs Dynamic Website&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;Static&lt;/code&gt; websites are sites with stable content, whereas &lt;code&gt;dynamic&lt;/code&gt; websites pull contents with user interactions. For the purpose of blogging, I didn&amp;rsquo;t need features of dynamic website, so I decided to search for static website generators.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Static&lt;/code&gt; websites are sites with stable content, whereas &lt;code&gt;dynamic&lt;/code&gt; websites pull contents with user requests. For the purpose of blogging, I didn&amp;rsquo;t need features of dynamic website, so I decided to build my blog with static website generators.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 &lt;p&gt;With little bit of research, I realized that there are three main static site generating platforms: &lt;code&gt;Jekyll&lt;/code&gt;, &lt;code&gt;Hexo&lt;/code&gt;, and &lt;code&gt;Hugo&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Among the three, I chose Hugo because it supports multilingual feature and its build time is the fastest among all.&lt;/p&gt;
+&lt;p&gt;The three platforms have pros and cons, but I decided to use &lt;code&gt;Hugo&lt;/code&gt; because it was fast and supported multilingual feature native.&lt;/p&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Please note that this post is based on Mac. For Windows and Linux systems, please refer to the official website.&lt;/p&gt;
+&lt;p&gt;Please note that this post is based on Mac. For Windows and Linux systems, please refer to the &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;official website&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;hugo-and-git&#34;&gt;Hugo and git&lt;/h3&gt;
-&lt;p&gt;You can install hugo and git through homebrew on terminal&lt;/p&gt;
+&lt;p&gt;You can install hugo and git through package manger, homebrew. If you don&amp;rsquo;t have homebrew installed, follow instructions on Homebrew&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;website&lt;/a&gt;. If homebrew is already installed, run the following command on terminal:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -44,12 +46,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;create-two-repositories&#34;&gt;Create Two Repositories&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;You need two repositories:&lt;/strong&gt; one to store all source and one to deploy the website.&lt;/p&gt;
-&lt;p&gt;For source repository, you can name it anyways. I will create a repository called &lt;code&gt;blog-repo&lt;/code&gt;.
-For deployment repository, you must create a repository for github pages: &lt;code&gt;&amp;lt;GITHUB USERNAME&amp;gt;.github.io&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You need two remote repositories:&lt;/strong&gt; one to store all source contents (&lt;code&gt;source repository&lt;/code&gt;) and one to deploy the website (&lt;code&gt;deployment repositroy&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;For &lt;code&gt;source repository&lt;/code&gt;, you can name it anyway you prefer. I will create a repository called &lt;code&gt;blog-repo&lt;/code&gt;.
+For &lt;code&gt;deployment repository&lt;/code&gt;, you must name it as Github Pages reguires: &lt;code&gt;&amp;lt;GITHUB USERNAME&amp;gt;.github.io&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;set-directory-structure&#34;&gt;Set Directory Structure&lt;/h2&gt;
 &lt;h3 id=&#34;source-repository&#34;&gt;Source repository&lt;/h3&gt;
-&lt;p&gt;On terminal, go to a desired directory and clone source repository:&lt;/p&gt;
+&lt;p&gt;On terminal, go to a desired directory and clone &lt;code&gt;source repository&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -59,21 +61,20 @@ For deployment repository, you must create a repository for github pages: &lt;co
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;create-hugo-site&#34;&gt;Create hugo site&lt;/h3&gt;
-&lt;p&gt;Then, change directory and create new hugo site. If you are more familiar with &lt;code&gt;YAML&lt;/code&gt; file format, add &lt;code&gt;-f yaml&lt;/code&gt; to the command:&lt;/p&gt;
+&lt;p&gt;Now, change directory to &lt;code&gt;source repository&lt;/code&gt; folder and createa Hugo project. Hugo supports &lt;code&gt;TOML&lt;/code&gt;, &lt;code&gt;YAML&lt;/code&gt;, and &lt;code&gt;JSON&lt;/code&gt; files. Personally I am familiar with &lt;code&gt;YAML&lt;/code&gt; files, so I created my project based on &lt;code&gt;YAML&lt;/code&gt;. If you are not sure, go to your choice of theme&amp;rsquo;s (explained later in this post) documentation and install their recommended version.&lt;/p&gt;
+&lt;p&gt;On terminal, run the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd &amp;lt;REPO-NAME&amp;gt; # change directory
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new site &amp;lt;SITE-NAME&amp;gt; # create hugo site
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# hugo new site &amp;lt;SITE-NAME&amp;gt; -f YAML
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new site &amp;lt;PROJECT-NAME&amp;gt; -f yaml # create hugo site
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;set-submodule-for-deployment&#34;&gt;Set submodule for deployment&lt;/h3&gt;
-&lt;p&gt;Change directory to hugo site folder. Then set deployment repository as submodule:&lt;/p&gt;
+&lt;p&gt;Change directory to Hugo project&amp;rsquo;s folder. Then set &lt;code&gt;deployment repository&lt;/code&gt; as submodule. If &lt;code&gt;public&lt;/code&gt; folder already exists, remove it.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -86,14 +87,23 @@ For deployment repository, you must create a repository for github pages: &lt;co
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;master&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;REPOSITORY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;public&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;install-theme&#34;&gt;Install Theme&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;To summarize the process until this point:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Hugo and Git on local machine&lt;/li&gt;
+&lt;li&gt;Create two remote repositories on Github&lt;/li&gt;
+&lt;li&gt;Clone &lt;code&gt;source repository&lt;/code&gt; to your local machine and create Hugo site.&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;deployment repository&lt;/code&gt; as submodule inside Hugo project folder as &lt;code&gt;public&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;install-theme&#34;&gt;Install Theme&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Unlike WordPress or other blogging platform, user must customize all features inside the blog unless user sets a theme. This can be a benefit as user can fully customize the website, but for me, I do not have the knowledge to design a website and blogging is the main purpose, so I decided to use pre-built themes.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;find-a-theme&#34;&gt;Find a theme&lt;/h3&gt;
-&lt;p&gt;You can google hugo themes or look up your favorite one from hugo&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;official website&lt;/a&gt;.
-This blog&amp;rsquo;s theme is in &lt;code&gt;hugo-theme-stack&lt;/code&gt;. For more information, visit &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hugo&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;official website&lt;/a&gt; shows all supported themes. In this post and blog, I am using &lt;code&gt;hugo-theme-stack&lt;/code&gt;. For more information, visit the creator&amp;rsquo;s [website]](&lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stack.jimmycai.com/)&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;install-the-theme&#34;&gt;Install the theme&lt;/h3&gt;
-&lt;p&gt;Run the following command in the root directory of your hugo site:&lt;/p&gt;
+&lt;p&gt;Once you choose your theme, run the following command in the root directory of your hugo site:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -102,8 +112,7 @@ This blog&amp;rsquo;s theme is in &lt;code&gt;hugo-theme-stack&lt;/code&gt;. For
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-v&#34; data-lang=&#34;v&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
-&lt;p&gt;Add the following statement in &lt;code&gt;config.yaml&lt;/code&gt; file:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;If you choose other theme, follow the installation guide for that theme. Next, open &lt;code&gt;config.yaml&lt;/code&gt; file inside hugo site folder and add the following script:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -112,7 +121,10 @@ This blog&amp;rsquo;s theme is in &lt;code&gt;hugo-theme-stack&lt;/code&gt;. For
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THEME: hugo-theme-stack
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;make-new-post-and-test&#34;&gt;Make new post and Test&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;make-new-contents&#34;&gt;Make New Contents&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All contents must be created under &lt;code&gt;contents&lt;/code&gt; folder.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;create-new-post&#34;&gt;Create new post&lt;/h3&gt;
 &lt;p&gt;On terminal, run the following command to create a new post:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -124,18 +136,18 @@ This blog&amp;rsquo;s theme is in &lt;code&gt;hugo-theme-stack&lt;/code&gt;. For
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;test-on-local-server&#34;&gt;Test on local server&lt;/h3&gt;
-&lt;p&gt;On root directory of the hugo site, run the following command:&lt;/p&gt;
+&lt;p&gt;Before deployment, build and test your website on your local machine. Go to the root directory and run the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo server
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo server -D
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This command will let you see how the website will look locally. Go to &lt;code&gt;localhost:1313&lt;/code&gt;. &lt;code&gt;-D&lt;/code&gt; will show draft posts as well.&lt;/p&gt;
-&lt;h2 id=&#34;deploy&#34;&gt;Deploy&lt;/h2&gt;
-&lt;p&gt;Once you are ready to make your changes public, go to root diretory of hugo site folder and run the following command:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;-D&lt;/code&gt; will show posts in draft mode. Check your website on &lt;code&gt;localhost:1313&lt;/code&gt; on your browser.&lt;/p&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;p&gt;Once you are ready to make your changes public, you need to deploy it through &lt;code&gt;deployment repository&lt;/code&gt;. Change directory to root directory of Hugo site and run the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -145,16 +157,16 @@ This blog&amp;rsquo;s theme is in &lt;code&gt;hugo-theme-stack&lt;/code&gt;. For
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo -t &amp;lt;THEME-NAME&amp;gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo -t &amp;lt;THEME-NAME&amp;gt; # THEME-NAME should be name in config file
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd public
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add --all
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &amp;#39;MESSAGE&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push origin master
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This will automatically change your &lt;code&gt;public&lt;/code&gt; folder ready to be deployed and push all changes to the deployment repository.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;hugo -t &amp;lt;THEME-NAME&amp;gt;&lt;/code&gt; command will automatically build website inside &lt;code&gt;public&lt;/code&gt; folder ready for deployment. Then you push &lt;code&gt;public&lt;/code&gt; folder to &lt;code&gt;deployment repository&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;http://wogus00.github.io/img/2023/blog-build/blog-diagram.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://wogus00.github.io/img/2023/build-blog-1/blog-diagram.png&#34;
 	
 	
 	
