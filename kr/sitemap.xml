@@ -26,6 +26,18 @@
                 href="http://wogus00.github.io/kr/page/archives/archives/"
                 />
   </url><url>
+    <loc>http://wogus00.github.io/kr/categories/blog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="http://wogus00.github.io/kr/categories/blog/"
+                />
+  </url><url>
     <loc>http://wogus00.github.io/kr/categories/</loc>
     <xhtml:link
                 rel="alternate"
