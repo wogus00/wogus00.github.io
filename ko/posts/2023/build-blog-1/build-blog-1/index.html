@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Building blog with Hugo and Github Pages'>
-<title>Building Blog (1): Hugo and Github Pages</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Hugo와 Github Pages를 이용하여 블로그 구축하기'>
+<title>블로그 구축기 (1): Hugo &#43; Github Pages</title>
 
-<link rel='canonical' href='http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/'>
+<link rel='canonical' href='http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Building Blog (1): Hugo and Github Pages'>
-<meta property='og:description' content='Building blog with Hugo and Github Pages'>
-<meta property='og:url' content='http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='블로그 구축기 (1): Hugo &#43; Github Pages'>
+<meta property='og:description' content='Hugo와 Github Pages를 이용하여 블로그 구축하기'>
+<meta property='og:url' content='http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/'>
 <meta property='og:site_name' content='Jae&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='github-pages' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2023-01-03T13:54:48-05:00'/><meta property='article:modified_time' content='2023-01-03T13:54:48-05:00'/>
-<meta name="twitter:title" content="Building Blog (1): Hugo and Github Pages">
-<meta name="twitter:description" content="Building blog with Hugo and Github Pages">
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='github-pages' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2023-01-03T14:00:00-05:00'/><meta property='article:modified_time' content='2023-01-03T14:00:00-05:00'/>
+<meta name="twitter:title" content="블로그 구축기 (1): Hugo &#43; Github Pages">
+<meta name="twitter:description" content="Hugo와 Github Pages를 이용하여 블로그 구축하기">
     </head>
     <body class="
     article-page
@@ -40,7 +40,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -50,7 +50,7 @@
         
             
             <figure class="site-avatar">
-                <a href="/">
+                <a href="/ko/">
                 
                     
                     
@@ -69,7 +69,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Jae&#39;s Blog</a></h1>
+            <h1 class="site-name"><a href="/ko">Jae&#39;s Blog</a></h1>
             <h2 class="site-description"></h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -77,7 +77,7 @@
         
         
         <li >
-            <a href='/' >
+            <a href='/ko/' >
                 
                 
                 
@@ -97,7 +97,7 @@
         
         
         <li >
-            <a href='/page/about/' >
+            <a href='/ko/page/about/' >
                 
                 
                 
@@ -116,7 +116,7 @@
         
         
         <li >
-            <a href='/page/archives/' >
+            <a href='/ko/page/archives/' >
                 
                 
                 
@@ -136,7 +136,7 @@
         
         
         <li >
-            <a href='/page/search/' >
+            <a href='/ko/page/search/' >
                 
                 
                 
@@ -169,9 +169,9 @@
 
                     <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
                         
-                            <option value="http://wogus00.github.io/" selected>English</option>
+                            <option value="http://wogus00.github.io/" >English</option>
                         
-                            <option value="http://wogus00.github.io/ko/" >한국어</option>
+                            <option value="http://wogus00.github.io/ko/" selected>한국어</option>
                         
                     </select>
                 </li>
@@ -195,7 +195,7 @@
 
 
 
-                    <span>Dark Mode</span>
+                    <span>다크 모드</span>
                 </li>
             
         </div>
@@ -219,44 +219,44 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">목차</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#static-vs-dynamic-website">Static vs Dynamic Website</a>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#정적-vs-동적-사이트">정적 vs 동적 사이트</a>
       <ol>
         <li><a href="#hugo">Hugo</a></li>
       </ol>
     </li>
-    <li><a href="#installation">Installation</a>
+    <li><a href="#설치">설치</a>
       <ol>
-        <li><a href="#hugo-and-git">Hugo and git</a></li>
-        <li><a href="#create-two-repositories">Create Two Repositories</a></li>
+        <li><a href="#hugo-와-git-설치">Hugo 와 Git 설치</a></li>
+        <li><a href="#리퍼지토리-2개-생성">리퍼지토리 2개 생성</a></li>
       </ol>
     </li>
-    <li><a href="#set-directory-structure">Set Directory Structure</a>
+    <li><a href="#디렉토리-설정">디렉토리 설정</a>
       <ol>
-        <li><a href="#source-repository">Source repository</a></li>
-        <li><a href="#create-hugo-site">Create hugo site</a></li>
-        <li><a href="#set-submodule-for-deployment">Set submodule for deployment</a></li>
+        <li><a href="#소스-리퍼지토리">소스 리퍼지토리</a></li>
+        <li><a href="#hugo-사이트-생성">Hugo 사이트 생성</a></li>
+        <li><a href="#배포-submodule-설정">배포 submodule 설정</a></li>
       </ol>
     </li>
-    <li><a href="#install-theme">Install Theme</a>
+    <li><a href="#테마">테마</a>
       <ol>
-        <li><a href="#find-a-theme">Find a theme</a></li>
-        <li><a href="#install-the-theme">Install the theme</a></li>
+        <li><a href="#테마-선택">테마 선택</a></li>
+        <li><a href="#테마-설치">테마 설치</a></li>
       </ol>
     </li>
-    <li><a href="#make-new-contents">Make New Contents</a>
+    <li><a href="#컨텐츠-생성">컨텐츠 생성</a>
       <ol>
-        <li><a href="#create-new-post">Create new post</a></li>
-        <li><a href="#test-on-local-server">Test on local server</a></li>
+        <li><a href="#포스트-생성">포스트 생성</a></li>
+        <li><a href="#로컬서버에서-테스트">로컬서버에서 테스트</a></li>
       </ol>
     </li>
-    <li><a href="#deployment">Deployment</a></li>
-    <li><a href="#summary">Summary</a></li>
+    <li><a href="#배포">배포</a></li>
+    <li><a href="#정리">정리</a></li>
   </ol>
 </nav>
         </div>
@@ -275,7 +275,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/blog/" >
+            <a href="/ko/categories/blog/" >
                 Blog
             </a>
         
@@ -284,12 +284,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/2023/build-blog-1/build-blog-1/">Building Blog (1): Hugo and Github Pages</a>
+            <a href="/ko/posts/2023/build-blog-1/build-blog-1/">블로그 구축기 (1): Hugo &#43; Github Pages</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Building blog with Hugo and Github Pages
+            Hugo와 Github Pages를 이용하여 블로그 구축하기
         </h3>
         
     </div>
@@ -333,7 +333,7 @@
 
             <div>
                 
-                    <a href="http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/" class="link">한국어</a>
+                    <a href="http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/" class="link">English</a>
                 
             </div>
         </footer>
@@ -345,29 +345,30 @@
     <section class="article-content">
     
     
-    <h2 id="introduction">Introduction</h2>
-<p>Documentation of my learning has never been on my radar. Whenver I faced an issue, I would always focus on fixing it. Eventually, I forgot how I solved that issue, which made me repeat the process of googling for the solution. I recieved lots of help from other&rsquo;s tech blogs, so I decided to create my own blog for others and myself.</p>
-<p>I had three features that I wanted for my blog:</p>
+    <h2 id="개요">개요</h2>
+<p>공부를 처음 시작했을때부터 문서화는 뒷전이였다. 이슈가 생겼을땐 이슈를 해결하는데 급급했고 결국 같은 이슈가 생겼을때 해결방법을 까먹어서 다시 구글링하는 과정을 반복했다. 구글링하는 과정에는 항상 개발블로거들이 작성한 포스트들이 도움이 많이되어 나도 블로그를 구축하기로 결심했다.</p>
+<p>개인적으로 블로그를 구축하는데 3가지 요구사항이 있었다:</p>
 <ol>
-<li>Version Control</li>
-<li>Multilingual feature</li>
-<li>Simple and fast</li>
+<li>깃을 이용한 버전 컨트롤 (version control)</li>
+<li>다국어 기능 지원</li>
+<li>간단하고 빠름</li>
 </ol>
-<h2 id="static-vs-dynamic-website">Static vs Dynamic Website</h2>
+<h2 id="정적-vs-동적-사이트">정적 vs 동적 사이트</h2>
 <blockquote>
-<p><code>Static</code> websites are sites with stable content, whereas <code>dynamic</code> websites pull contents with user requests. For the purpose of blogging, I didn&rsquo;t need features of dynamic website, so I decided to build my blog with static website generators.</p>
+<p><code>정적</code> 사이트는 서버에 미리 저장된 파일을 그대로 전달하는 사이트다. 반대로 <code>동적</code> 사이트는 사용자의 요청(request)에 따라 생성되는 데이터를 전달하는 사이트다. 블로그같은 문서화를 위한 사이트엔 정적 사이트의 기능으로도 충분하기 때문에 정적 사이트 생성기(static website generator)를 이용하여 블로그를 구축하기로 결심했다.</p>
 </blockquote>
 <h3 id="hugo">Hugo</h3>
-<p>With little bit of research, I realized that there are three main static site generating platforms: <code>Jekyll</code>, <code>Hexo</code>, and <code>Hugo</code>.</p>
-<p>The three platforms have pros and cons, but I decided to use <code>Hugo</code> because it was fast and supported multilingual feature native.</p>
-<h2 id="installation">Installation</h2>
+<p>구글링을 한 결과, 크게 3가지의 정적 사이트 생성 플랫폼이 있었다: <code>Jekyll</code>, <code>Hexo</code>, 그리고 <code>Hugo</code>.</p>
+<p>플랫폼 모두 장단점이 있었지만 빠르고 자체적으로 다국어 기능을 지원하는 <code>Hugo</code>를 이용하기로 했다.</p>
+<h2 id="설치">설치</h2>
 <blockquote>
-<p>Please note that this post is based on Mac. For Windows and Linux systems, please refer to the <a class="link" href="https://gohugo.io/installation/"  target="_blank" rel="noopener"
-    >official website</a>.</p>
+<p>모든 설치는 Mac 기준이다. Windows나 Linux 이용자는 <a class="link" href="https://gohugo.io/installation/"  target="_blank" rel="noopener"
+    >공식웹사이트</a>에서 설치방법을 확인하면 된다.</p>
 </blockquote>
-<h3 id="hugo-and-git">Hugo and git</h3>
-<p>You can install hugo and git through package manger, homebrew. If you don&rsquo;t have homebrew installed, follow instructions on Homebrew&rsquo;s <a class="link" href="https://brew.sh/"  target="_blank" rel="noopener"
-    >website</a>. If homebrew is already installed, run the following command on terminal:</p>
+<h3 id="hugo-와-git-설치">Hugo 와 Git 설치</h3>
+<p><code>Hugo</code>와 <code>Git</code> 모두 패키지 매니저 홈브루를 통해서 설치할수있다. 홈브루 설치는 홈브루 웹사이트(<a class="link" href="https://brew.sh/"  target="_blank" rel="noopener"
+    >https://brew.sh/</a>)를 참고하면 된다.
+홈브루 설치 이후 터미널에 아래 커맨드를 입력한다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -378,36 +379,36 @@
 </span></span><span class="line"><span class="cl">$ brew install git
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="create-two-repositories">Create Two Repositories</h3>
-<p><strong>You need two remote repositories:</strong> one to store all source contents (<code>source repository</code>) and one to deploy the website (<code>deployment repositroy</code>).</p>
-<p>For <code>source repository</code>, you can name it anyway you prefer. I will create a repository called <code>blog-repo</code>.
-For <code>deployment repository</code>, you must name it as Github Pages reguires: <code>&lt;GITHUB USERNAME&gt;.github.io</code>.</p>
-<h2 id="set-directory-structure">Set Directory Structure</h2>
-<h3 id="source-repository">Source repository</h3>
-<p>On terminal, go to a desired directory and clone <code>source repository</code>:</p>
+</div><h3 id="리퍼지토리-2개-생성">리퍼지토리 2개 생성</h3>
+<p><strong>2개의 remote 리퍼지로리가 필요하다</strong>: 하나는 컨텐츠소스를 저장할 목적이고 (<code>source repository</code>) 다른 하나는 웹사이트를 배포할 목적으로 (<code>deployment repository</code>) 생성할거다.</p>
+<p><code>source repository</code>는 아무 이름으로 생성해도 괜찮다. 나는 <code>blog-repo</code>로 생성했다.
+<code>deployment repository</code>는 <code>Github Pages</code>에서 요구하는 이름으로 생성해야한다: <code>&lt;깃허브_아이디&gt;.github.io</code>.</p>
+<h2 id="디렉토리-설정">디렉토리 설정</h2>
+<h3 id="소스-리퍼지토리">소스 리퍼지토리</h3>
+<p>먼저 로컬 머신에 <code>source repository</code>를 <code>clone</code>해 온다. 원하는 디렉토리에서 아래 커맨드를 입력한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ git clone &lt;REPOSITORY-URL&gt;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ git clone &lt;소스_리퍼지토리_URL&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="create-hugo-site">Create hugo site</h3>
-<p>Now, change directory to <code>source repository</code> folder and createa Hugo project. Hugo supports <code>TOML</code>, <code>YAML</code>, and <code>JSON</code> files. Personally I am familiar with <code>YAML</code> files, so I created my project based on <code>YAML</code>. If you are not sure, go to your choice of theme&rsquo;s (explained later in this post) documentation and install their recommended version.</p>
-<p>On terminal, run the following command:</p>
+</div><h3 id="hugo-사이트-생성">Hugo 사이트 생성</h3>
+<p>이제 <code>source repository</code> 디렉토리로 이동한 다음 Hugo 프로젝트를 생성해준다. Hugo는 <code>TOML</code>, <code>YAML</code>, <code>JSON</code>파일을 읽을 수 있다. 나는 개인적으로 <code>YAML</code>파일이 친숙하여 <code>YAML</code>파일로 프로젝트를 생성했다. 잘 모르겠다면 이후 설명할 테마 documentation에서 추천하는 방식으로 만들면 된다.</p>
+<p>터미널에 아래 커맨드를 입력한다</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd &lt;REPO-NAME&gt; # change directory
-</span></span><span class="line"><span class="cl">$ hugo new site &lt;PROJECT-NAME&gt; -f yaml # create hugo site
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd &lt;저장소_이름&gt; # 디렉토리 변경
+</span></span><span class="line"><span class="cl">$ hugo new site &lt;프로젝트_이름&gt; -f yaml 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="set-submodule-for-deployment">Set submodule for deployment</h3>
-<p>Change directory to Hugo project&rsquo;s folder. Then set <code>deployment repository</code> as submodule. If <code>public</code> folder already exists, remove it.</p>
+</div><h3 id="배포-submodule-설정">배포 submodule 설정</h3>
+<p>이제 Hugo 프로젝트 폴더로 이동한다. 그리고 <code>deployment repository</code> submodule로 지정한다. 만약 <code>public</code>폴더 가 이미 생성되어 있다면 삭제 후 지정해준다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -415,28 +416,28 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">cd</span> <span class="p">&lt;</span><span class="nc">SITE</span><span class="o">-</span><span class="nc">NAME</span><span class="p">&gt;</span> <span class="o">#</span> <span class="nv">change</span> <span class="nv">directory</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">rm</span> <span class="nv">public</span> <span class="o">#</span> <span class="k">if</span> <span class="nv">public</span> <span class="nv">folder</span> <span class="nv">already</span> <span class="nv">exists</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">master</span> <span class="p">&lt;</span><span class="nc">REPOSITORY</span><span class="o">-</span><span class="nc">URL</span><span class="p">&gt;</span> <span class="nv">public</span> 
+<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">cd</span> <span class="p">&lt;</span><span class="err">프로젝트</span><span class="nv">_</span><span class="err">이름</span><span class="p">&gt;</span> <span class="o">#</span> <span class="err">디렉토리</span> <span class="err">변경</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">rm</span> <span class="nv">public</span> <span class="o">#</span> <span class="nv">public</span> <span class="err">폴더가</span> <span class="err">이미</span> <span class="err">생성되어있는</span> <span class="err">경우</span> <span class="err">삭제</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">master</span> <span class="p">&lt;</span><span class="err">배포</span><span class="nv">_</span><span class="err">리퍼지토리</span><span class="nv">_URL</span><span class="p">&gt;</span> <span class="nv">public</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>To summarize the process until this point:</p>
+</div><p>현재까지 과정을 정리하자면:</p>
 <ol>
-<li>Install Hugo and Git on local machine</li>
-<li>Create two remote repositories on Github</li>
-<li>Clone <code>source repository</code> to your local machine and create Hugo site.</li>
-<li>Set <code>deployment repository</code> as submodule inside Hugo project folder as <code>public</code></li>
+<li>Hugo와 Git 로컬 머신에 설치</li>
+<li>Github에서 remote repository 2개 생성</li>
+<li>로컬머신으로 <code>source repository</code>를 clone하고 안에 Hugo site 생성</li>
+<li>Hugo site 폴더안에 <code>deployment repository</code>를 <code>public</code> 폴더안에 submodule로 지정</li>
 </ol>
-<h2 id="install-theme">Install Theme</h2>
+<h2 id="테마">테마</h2>
 <blockquote>
-<p>Unlike WordPress or other blogging platform, user must customize all features inside the blog unless user sets a theme. This can be a benefit as user can fully customize the website, but for me, I do not have the knowledge to design a website and blogging is the main purpose, so I decided to use pre-built themes.</p>
+<p>티스토리나 워드프레스 플랫폼과 다르게 테마를 지정하지 않으면 이용자가 모든 부분을 디자인해야한다. 모든 부분을 커스텀할 수 있는것이 장점이나, 나는 그럴 지식도 부족하고 포스팅이 주 목적이기 때문에 테마를 불러오기로 결정했다</p>
 </blockquote>
-<h3 id="find-a-theme">Find a theme</h3>
-<p>Hugo&rsquo;s <a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
-    >official website</a> shows all supported themes. In this post and blog, I am using <code>hugo-theme-stack</code>. For more information, visit the creator&rsquo;s [website]](<a class="link" href="https://stack.jimmycai.com/%29"  target="_blank" rel="noopener"
-    >https://stack.jimmycai.com/)</a>.</p>
-<h3 id="install-the-theme">Install the theme</h3>
-<p>Once you choose your theme, run the following command in the root directory of your hugo site:</p>
+<h3 id="테마-선택">테마 선택</h3>
+<p>정식 <a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >웹사이트에</a> 가면 지원하는 테마를 확인할 수 있다. 이 포스트 및 블로그에선 <code>hugo-theme-stack</code>를 이용하고 있다. 자세한 정보는 테마 제작자의 <a class="link" href="https://stack.jimmycai.com/"  target="_blank" rel="noopener"
+    >웹사이트</a>에서 확인할 수 있다.</p>
+<h3 id="테마-설치">테마 설치</h3>
+<p>테마를 정했다면 Hugo 프로젝트의 루트 디렉토리로 이동하여 터미널에 아래 커맨드를 입력해준다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -445,7 +446,8 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
 <pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>If you choose other theme, follow the installation guide for that theme. Next, open <code>config.yaml</code> file inside hugo site folder and add the following script:</p>
+</div><p>물론 다른 테마를 선택했다면 해당 테마의 가이드를 따르면 된다.
+이후 Hugo 프로젝트 폴더에 <code>config.yaml</code> 파일에 아래 스크립트를 추가한다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -454,22 +456,22 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">THEME: hugo-theme-stack
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="make-new-contents">Make New Contents</h2>
+</div><h2 id="컨텐츠-생성">컨텐츠 생성</h2>
 <blockquote>
-<p>All contents must be created under <code>contents</code> folder.</p>
+<p>모든 컨텐츠는 Hugo 프로젝트안에 <code>contents</code> 폴더에 업로드 해야한다.</p>
 </blockquote>
-<h3 id="create-new-post">Create new post</h3>
-<p>On terminal, run the following command to create a new post:</p>
+<h3 id="포스트-생성">포스트 생성</h3>
+<p>먼저 새로운 포스트를 생성해본다. Hugo 프로젝트 루트 디렉토리에서 아래 커맨드를 입력한다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo new posts/YOUR-POST-NAME.md
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo new posts/포스트-이름.md
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="test-on-local-server">Test on local server</h3>
-<p>Before deployment, build and test your website on your local machine. Go to the root directory and run the following command:</p>
+</div><h3 id="로컬서버에서-테스트">로컬서버에서 테스트</h3>
+<p>이제 배포를 하기전에 로컬서버에서 사이트를 빌드해본다. 루트 디렉토리에서 아래 커맨드를 입력한다:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -478,9 +480,9 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo server -D
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>-D</code> will show posts in draft mode. Check your website on <code>localhost:1313</code> on your browser.</p>
-<h2 id="deployment">Deployment</h2>
-<p>Once you are ready to make your changes public, you need to deploy it through <code>deployment repository</code>. Change directory to root directory of Hugo site and run the following command:</p>
+</div><p><code>-D</code>는 draft 모드인 포스트도 확인할 수 있다. <code>localhost:1313</code>에서 사이트가 어떻게 빌드되었는지 확인핸다.</p>
+<h2 id="배포">배포</h2>
+<p>로컬서버에서 만족했으면 이제 <code>deployment repository</code>에 배포만 하면 된다. Hugo 프로젝트 루트 디렉토리로 이동 후 아래 커맨드를 입력한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -490,15 +492,15 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo -t &lt;THEME-NAME&gt; # THEME-NAME should be name in config file
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo -t &lt;테마-이름&gt; # config 파일에 입력한 이름을 입력한다
 </span></span><span class="line"><span class="cl">$ cd public
 </span></span><span class="line"><span class="cl">$ git add --all
-</span></span><span class="line"><span class="cl">$ git commit -m &#39;MESSAGE&#39;
+</span></span><span class="line"><span class="cl">$ git commit -m &#39;커밋 메세지&#39;
 </span></span><span class="line"><span class="cl">$ git push origin master
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>hugo -t &lt;THEME-NAME&gt;</code> command will automatically build website inside <code>public</code> folder ready for deployment. Then you push <code>public</code> folder to <code>deployment repository</code>.</p>
-<h2 id="summary">Summary</h2>
+</div><p><code>hugo -t &lt;테마-이름&gt;</code> 커맨드를 입력하면 <code>public</code>폴더를 알아서 배포용 파일로 수정한다. 이후 <code>public</code> 폴더를 <code>deployment repository</code>로 푸쉬하는 방식이다.</p>
+<h2 id="정리">정리</h2>
 <p><img src="/img/2023/build-blog-1/blog-diagram.png"
 	
 	
@@ -509,7 +511,7 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
 	
 	
 ></p>
-<p>Above is a diagram of how I designed my blog. In next post, I will be making changes to <code>config.yaml</code> file for blog configurations.</p>
+<p>위 사진은 내가 블로그 환경을 정리해놓은 diagram이다. 다음 포스트땐 <code>config</code>파일을 수정해 보겠다.</p>
 
 </section>
 
@@ -518,11 +520,11 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
     
     <section class="article-tags">
         
-            <a href="/tags/hugo/">hugo</a>
+            <a href="/ko/tags/hugo/">hugo</a>
         
-            <a href="/tags/github-pages/">github-pages</a>
+            <a href="/ko/tags/github-pages/">github-pages</a>
         
-            <a href="/tags/blog/">blog</a>
+            <a href="/ko/tags/blog/">blog</a>
         
     </section>
 
@@ -562,8 +564,8 @@ For <code>deployment repository</code>, you must name it as Github Pages reguire
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 테마 사용 중
     </section>
 </footer>
 

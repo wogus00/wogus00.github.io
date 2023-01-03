@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://wogus00.github.io/ko/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -12,6 +13,110 @@
                 rel="alternate"
                 hreflang="ko"
                 href="http://wogus00.github.io/ko/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/tags/blog/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/tags/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/tags/blog/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/categories/blog/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/blog/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/categories/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/tags/github-pages/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/tags/github-pages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/tags/github-pages/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/tags/hugo/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/tags/hugo/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/posts/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/posts/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/tags/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/tags/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/</loc>
+    <lastmod>2023-01-03T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/posts/2023/build-blog-1/build-blog-1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/"
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/page/about/</loc>
@@ -36,30 +141,6 @@
                 rel="alternate"
                 hreflang="ko"
                 href="http://wogus00.github.io/ko/page/archives/"
-                />
-  </url><url>
-    <loc>http://wogus00.github.io/ko/categories/blog/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wogus00.github.io/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wogus00.github.io/ko/categories/blog/"
-                />
-  </url><url>
-    <loc>http://wogus00.github.io/ko/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wogus00.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wogus00.github.io/ko/categories/"
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/categories/machine-learning/</loc>
@@ -108,18 +189,6 @@
                 rel="alternate"
                 hreflang="ko"
                 href="http://wogus00.github.io/ko/page/search/"
-                />
-  </url><url>
-    <loc>http://wogus00.github.io/ko/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wogus00.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wogus00.github.io/ko/tags/"
                 />
   </url>
 </urlset>

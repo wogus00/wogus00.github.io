@@ -5,7 +5,183 @@
         <link>http://wogus00.github.io/ko/</link>
         <description>Recent content on Jae&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="http://wogus00.github.io/ko/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 03 Jan 2023 14:00:00 -0500</lastBuildDate><atom:link href="http://wogus00.github.io/ko/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>블로그 구축기 (1): Hugo &#43; Github Pages</title>
+        <link>http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/</link>
+        <pubDate>Tue, 03 Jan 2023 14:00:00 -0500</pubDate>
+        
+        <guid>http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/</guid>
+        <description>&lt;h2 id=&#34;개요&#34;&gt;개요&lt;/h2&gt;
+&lt;p&gt;공부를 처음 시작했을때부터 문서화는 뒷전이였다. 이슈가 생겼을땐 이슈를 해결하는데 급급했고 결국 같은 이슈가 생겼을때 해결방법을 까먹어서 다시 구글링하는 과정을 반복했다. 구글링하는 과정에는 항상 개발블로거들이 작성한 포스트들이 도움이 많이되어 나도 블로그를 구축하기로 결심했다.&lt;/p&gt;
+&lt;p&gt;개인적으로 블로그를 구축하는데 3가지 요구사항이 있었다:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;깃을 이용한 버전 컨트롤 (version control)&lt;/li&gt;
+&lt;li&gt;다국어 기능 지원&lt;/li&gt;
+&lt;li&gt;간단하고 빠름&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;정적-vs-동적-사이트&#34;&gt;정적 vs 동적 사이트&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;정적&lt;/code&gt; 사이트는 서버에 미리 저장된 파일을 그대로 전달하는 사이트다. 반대로 &lt;code&gt;동적&lt;/code&gt; 사이트는 사용자의 요청(request)에 따라 생성되는 데이터를 전달하는 사이트다. 블로그같은 문서화를 위한 사이트엔 정적 사이트의 기능으로도 충분하기 때문에 정적 사이트 생성기(static website generator)를 이용하여 블로그를 구축하기로 결심했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
+&lt;p&gt;구글링을 한 결과, 크게 3가지의 정적 사이트 생성 플랫폼이 있었다: &lt;code&gt;Jekyll&lt;/code&gt;, &lt;code&gt;Hexo&lt;/code&gt;, 그리고 &lt;code&gt;Hugo&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;플랫폼 모두 장단점이 있었지만 빠르고 자체적으로 다국어 기능을 지원하는 &lt;code&gt;Hugo&lt;/code&gt;를 이용하기로 했다.&lt;/p&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;모든 설치는 Mac 기준이다. Windows나 Linux 이용자는 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;공식웹사이트&lt;/a&gt;에서 설치방법을 확인하면 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;hugo-와-git-설치&#34;&gt;Hugo 와 Git 설치&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Hugo&lt;/code&gt;와 &lt;code&gt;Git&lt;/code&gt; 모두 패키지 매니저 홈브루를 통해서 설치할수있다. 홈브루 설치는 홈브루 웹사이트(&lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://brew.sh/&lt;/a&gt;)를 참고하면 된다.
+홈브루 설치 이후 터미널에 아래 커맨드를 입력한다:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ brew install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;리퍼지토리-2개-생성&#34;&gt;리퍼지토리 2개 생성&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;2개의 remote 리퍼지로리가 필요하다&lt;/strong&gt;: 하나는 컨텐츠소스를 저장할 목적이고 (&lt;code&gt;source repository&lt;/code&gt;) 다른 하나는 웹사이트를 배포할 목적으로 (&lt;code&gt;deployment repository&lt;/code&gt;) 생성할거다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;source repository&lt;/code&gt;는 아무 이름으로 생성해도 괜찮다. 나는 &lt;code&gt;blog-repo&lt;/code&gt;로 생성했다.
+&lt;code&gt;deployment repository&lt;/code&gt;는 &lt;code&gt;Github Pages&lt;/code&gt;에서 요구하는 이름으로 생성해야한다: &lt;code&gt;&amp;lt;깃허브_아이디&amp;gt;.github.io&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;디렉토리-설정&#34;&gt;디렉토리 설정&lt;/h2&gt;
+&lt;h3 id=&#34;소스-리퍼지토리&#34;&gt;소스 리퍼지토리&lt;/h3&gt;
+&lt;p&gt;먼저 로컬 머신에 &lt;code&gt;source repository&lt;/code&gt;를 &lt;code&gt;clone&lt;/code&gt;해 온다. 원하는 디렉토리에서 아래 커맨드를 입력한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone &amp;lt;소스_리퍼지토리_URL&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;hugo-사이트-생성&#34;&gt;Hugo 사이트 생성&lt;/h3&gt;
+&lt;p&gt;이제 &lt;code&gt;source repository&lt;/code&gt; 디렉토리로 이동한 다음 Hugo 프로젝트를 생성해준다. Hugo는 &lt;code&gt;TOML&lt;/code&gt;, &lt;code&gt;YAML&lt;/code&gt;, &lt;code&gt;JSON&lt;/code&gt;파일을 읽을 수 있다. 나는 개인적으로 &lt;code&gt;YAML&lt;/code&gt;파일이 친숙하여 &lt;code&gt;YAML&lt;/code&gt;파일로 프로젝트를 생성했다. 잘 모르겠다면 이후 설명할 테마 documentation에서 추천하는 방식으로 만들면 된다.&lt;/p&gt;
+&lt;p&gt;터미널에 아래 커맨드를 입력한다&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd &amp;lt;저장소_이름&amp;gt; # 디렉토리 변경
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new site &amp;lt;프로젝트_이름&amp;gt; -f yaml 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;배포-submodule-설정&#34;&gt;배포 submodule 설정&lt;/h3&gt;
+&lt;p&gt;이제 Hugo 프로젝트 폴더로 이동한다. 그리고 &lt;code&gt;deployment repository&lt;/code&gt; submodule로 지정한다. 만약 &lt;code&gt;public&lt;/code&gt;폴더 가 이미 생성되어 있다면 삭제 후 지정해준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-v&#34; data-lang=&#34;v&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;프로젝트&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;이름&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;디렉토리&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;변경&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;폴더가&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;이미&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;생성되어있는&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;경우&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;master&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;배포&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;리퍼지토리&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;_URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;public&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;현재까지 과정을 정리하자면:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hugo와 Git 로컬 머신에 설치&lt;/li&gt;
+&lt;li&gt;Github에서 remote repository 2개 생성&lt;/li&gt;
+&lt;li&gt;로컬머신으로 &lt;code&gt;source repository&lt;/code&gt;를 clone하고 안에 Hugo site 생성&lt;/li&gt;
+&lt;li&gt;Hugo site 폴더안에 &lt;code&gt;deployment repository&lt;/code&gt;를 &lt;code&gt;public&lt;/code&gt; 폴더안에 submodule로 지정&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;테마&#34;&gt;테마&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;티스토리나 워드프레스 플랫폼과 다르게 테마를 지정하지 않으면 이용자가 모든 부분을 디자인해야한다. 모든 부분을 커스텀할 수 있는것이 장점이나, 나는 그럴 지식도 부족하고 포스팅이 주 목적이기 때문에 테마를 불러오기로 결정했다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;테마-선택&#34;&gt;테마 선택&lt;/h3&gt;
+&lt;p&gt;정식 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;웹사이트에&lt;/a&gt; 가면 지원하는 테마를 확인할 수 있다. 이 포스트 및 블로그에선 &lt;code&gt;hugo-theme-stack&lt;/code&gt;를 이용하고 있다. 자세한 정보는 테마 제작자의 &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;웹사이트&lt;/a&gt;에서 확인할 수 있다.&lt;/p&gt;
+&lt;h3 id=&#34;테마-설치&#34;&gt;테마 설치&lt;/h3&gt;
+&lt;p&gt;테마를 정했다면 Hugo 프로젝트의 루트 디렉토리로 이동하여 터미널에 아래 커맨드를 입력해준다:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-v&#34; data-lang=&#34;v&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;물론 다른 테마를 선택했다면 해당 테마의 가이드를 따르면 된다.
+이후 Hugo 프로젝트 폴더에 &lt;code&gt;config.yaml&lt;/code&gt; 파일에 아래 스크립트를 추가한다:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THEME: hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;컨텐츠-생성&#34;&gt;컨텐츠 생성&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;모든 컨텐츠는 Hugo 프로젝트안에 &lt;code&gt;contents&lt;/code&gt; 폴더에 업로드 해야한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;포스트-생성&#34;&gt;포스트 생성&lt;/h3&gt;
+&lt;p&gt;먼저 새로운 포스트를 생성해본다. Hugo 프로젝트 루트 디렉토리에서 아래 커맨드를 입력한다:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new posts/포스트-이름.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;로컬서버에서-테스트&#34;&gt;로컬서버에서 테스트&lt;/h3&gt;
+&lt;p&gt;이제 배포를 하기전에 로컬서버에서 사이트를 빌드해본다. 루트 디렉토리에서 아래 커맨드를 입력한다:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;-D&lt;/code&gt;는 draft 모드인 포스트도 확인할 수 있다. &lt;code&gt;localhost:1313&lt;/code&gt;에서 사이트가 어떻게 빌드되었는지 확인핸다.&lt;/p&gt;
+&lt;h2 id=&#34;배포&#34;&gt;배포&lt;/h2&gt;
+&lt;p&gt;로컬서버에서 만족했으면 이제 &lt;code&gt;deployment repository&lt;/code&gt;에 배포만 하면 된다. Hugo 프로젝트 루트 디렉토리로 이동 후 아래 커맨드를 입력한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo -t &amp;lt;테마-이름&amp;gt; # config 파일에 입력한 이름을 입력한다
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &amp;#39;커밋 메세지&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;hugo -t &amp;lt;테마-이름&amp;gt;&lt;/code&gt; 커맨드를 입력하면 &lt;code&gt;public&lt;/code&gt;폴더를 알아서 배포용 파일로 수정한다. 이후 &lt;code&gt;public&lt;/code&gt; 폴더를 &lt;code&gt;deployment repository&lt;/code&gt;로 푸쉬하는 방식이다.&lt;/p&gt;
+&lt;h2 id=&#34;정리&#34;&gt;정리&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://wogus00.github.io/img/2023/build-blog-1/blog-diagram.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;diagram&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;위 사진은 내가 블로그 환경을 정리해놓은 diagram이다. 다음 포스트땐 &lt;code&gt;config&lt;/code&gt;파일을 수정해 보겠다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>About</title>
         <link>http://wogus00.github.io/ko/page/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
