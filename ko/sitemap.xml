@@ -169,16 +169,28 @@
                 href="http://wogus00.github.io/ko/categories/machine-learning/"
                 />
   </url><url>
-    <loc>http://wogus00.github.io/ko/categories/personal/</loc>
+    <loc>http://wogus00.github.io/ko/categories/others/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wogus00.github.io/categories/personal/"
+                href="http://wogus00.github.io/categories/others/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wogus00.github.io/ko/categories/personal/"
+                href="http://wogus00.github.io/ko/categories/others/"
+                />
+  </url><url>
+    <loc>http://wogus00.github.io/ko/categories/projects/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wogus00.github.io/categories/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wogus00.github.io/ko/categories/projects/"
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/search/</loc>
