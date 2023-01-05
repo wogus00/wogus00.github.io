@@ -4,6 +4,8 @@
   <url>
     <loc>http://wogus00.github.io/ko/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -17,6 +19,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/tags/blog/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +34,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/categories/blog/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,6 +49,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/categories/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -56,6 +64,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/tags/github-pages/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -69,6 +79,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/tags/hugo/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -82,6 +94,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/posts/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -95,6 +109,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/tags/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -108,6 +124,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/posts/2023/build-blog-1/build-blog-1/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -121,6 +139,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/archives/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -134,6 +154,8 @@
   </url><url>
     <loc>http://wogus00.github.io/ko/page/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -146,6 +168,8 @@
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -158,6 +182,8 @@
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/categories/machine-learning/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -170,6 +196,8 @@
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/categories/others/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -182,6 +210,8 @@
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/categories/projects/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -194,6 +224,8 @@
                 />
   </url><url>
     <loc>http://wogus00.github.io/ko/search/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
