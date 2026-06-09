@@ -1,8 +1,15 @@
 title: Jaehyeon Park
-description: Personal website and multilingual blog.
+description: >-
+  Jaehyeon Park is a data science student and researcher working in
+  statistical modeling, sports analytics, and computational linguistics.
 url: https://wogus00.github.io
 baseurl: ""
 timezone: Asia/Seoul
+author:
+  name: Jaehyeon Park
+  email: jp4880@columbia.edu
+  linkedin: https://linkedin.com/in/jaehyeon-park-38238a180
+  github: https://github.com/wogus00
 
 markdown: kramdown
 kramdown:

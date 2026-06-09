@@ -1,6 +1,9 @@
 ---
 lang: en
 title: Blog
+description: >-
+  Jaehyeon Park's English blog is in progress and will cover data science,
+  research, software, projects, and lessons learned.
 permalink: /blog/en/
 ---
 <!doctype html>
@@ -8,10 +11,10 @@ permalink: /blog/en/
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="English blog by Jaehyeon Park. This section is currently in progress.">
-    <title>Blog | J. Park</title>
-    <link rel="alternate" hreflang="en" href="../en/">
-    <link rel="alternate" hreflang="ko" href="../ko/">
+    {% include seo.html %}
+    <link rel="alternate" hreflang="en" href="{{ '/blog/en/' | absolute_url }}">
+    <link rel="alternate" hreflang="ko" href="{{ '/blog/ko/' | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ '/blog/en/' | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   </head>
   <body>

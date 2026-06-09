@@ -1,6 +1,9 @@
 ---
 lang: ko
 title: 블로그
+description: >-
+  박재현의 한국어 블로그는 현재 준비 중이며 데이터 과학, 연구,
+  소프트웨어, 프로젝트에 대한 글을 다룰 예정입니다.
 permalink: /blog/ko/
 ---
 <!doctype html>
@@ -8,10 +11,10 @@ permalink: /blog/ko/
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="현재 준비 중인 박재현의 한국어 블로그입니다.">
-    <title>블로그 | J. Park</title>
-    <link rel="alternate" hreflang="en" href="../en/">
-    <link rel="alternate" hreflang="ko" href="../ko/">
+    {% include seo.html %}
+    <link rel="alternate" hreflang="en" href="{{ '/blog/en/' | absolute_url }}">
+    <link rel="alternate" hreflang="ko" href="{{ '/blog/ko/' | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ '/blog/en/' | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   </head>
   <body>
