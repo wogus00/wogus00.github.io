@@ -1,0 +1,31 @@
+title: Jaehyeon Park
+description: Personal website and multilingual blog.
+url: https://wogus00.github.io
+baseurl: ""
+timezone: Asia/Seoul
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: blog/en/_posts
+      type: posts
+    values:
+      layout: post
+      lang: en
+  - scope:
+      path: blog/ko/_posts
+      type: posts
+    values:
+      layout: post
+      lang: ko
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

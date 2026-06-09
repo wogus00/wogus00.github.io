@@ -1,0 +1,70 @@
+---
+lang: en
+title: Blog
+permalink: /blog/en/
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="English blog by Jaehyeon Park. This section is currently in progress.">
+    <title>Blog | J. Park</title>
+    <link rel="alternate" hreflang="en" href="../en/">
+    <link rel="alternate" hreflang="ko" href="../ko/">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="blog-header">
+      <div class="container">
+        <a class="blog-back" href="{{ '/#blog' | relative_url }}">&larr; Back to portfolio</a>
+        <nav class="language-switch" aria-label="Blog language">
+          <a href="{{ '/blog/en/' | relative_url }}" lang="en" aria-current="page">English</a>
+          <a href="{{ '/blog/ko/' | relative_url }}" lang="ko">한국어</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="blog-main container">
+      <p class="eyebrow">Writing</p>
+      <h1 class="blog-title">Blog in progress.</h1>
+      <p class="blog-description">
+        I am currently building this section. It will soon include notes on
+        software, projects, research, and things I am learning.
+      </p>
+
+      {% assign posts = site.posts | where: 'lang', 'en' %}
+      {% if posts.size > 0 %}
+        <section class="post-list" aria-labelledby="posts-heading">
+          <h2 class="sr-only" id="posts-heading">Posts</h2>
+          {% for post in posts %}
+            <article class="post-preview">
+              <a href="{{ post.url | relative_url }}">
+                <div class="post-preview-meta">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: '%B %-d, %Y' }}
+                  </time>
+                  {% if post.tags.size > 0 %}
+                    <span>{{ post.tags | join: ' / ' }}</span>
+                  {% endif %}
+                </div>
+                <h2>{{ post.title }}</h2>
+                {% if post.description %}
+                  <p>{{ post.description }}</p>
+                {% else %}
+                  <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
+                {% endif %}
+                <span class="read-more">Read post <span aria-hidden="true">&rarr;</span></span>
+              </a>
+            </article>
+          {% endfor %}
+        </section>
+      {% else %}
+        <section class="empty-state" aria-labelledby="posts-heading">
+          <h2 id="posts-heading">This section is still in progress.</h2>
+          <p>Please check back later for the first English post.</p>
+        </section>
+      {% endif %}
+    </main>
+  </body>
+</html>

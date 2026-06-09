@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | escape }}"
+    >
+    <title>{{ page.title | escape }} | J. Park</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+    {% assign english_url = '/blog/en/' %}
+    {% assign korean_url = '/blog/ko/' %}
+    {% if page.translation_key %}
+      {% assign translations = site.posts | where: 'translation_key', page.translation_key %}
+      {% assign english_posts = translations | where: 'lang', 'en' %}
+      {% assign korean_posts = translations | where: 'lang', 'ko' %}
+      {% assign english_post = english_posts | first %}
+      {% assign korean_post = korean_posts | first %}
+      {% if english_post %}
+        {% assign english_url = english_post.url %}
+        <link rel="alternate" hreflang="en" href="{{ english_post.url | absolute_url }}">
+      {% endif %}
+      {% if korean_post %}
+        {% assign korean_url = korean_post.url %}
+        <link rel="alternate" hreflang="ko" href="{{ korean_post.url | absolute_url }}">
+      {% endif %}
+    {% endif %}
+  </head>
+  <body>
+    <header class="blog-header">
+      <div class="container">
+        {% if page.lang == 'ko' %}
+          <a class="blog-back" href="{{ '/blog/ko/' | relative_url }}">&larr; 글 목록으로</a>
+        {% else %}
+          <a class="blog-back" href="{{ '/blog/en/' | relative_url }}">&larr; Back to posts</a>
+        {% endif %}
+        <nav class="language-switch" aria-label="Blog language">
+          <a
+            href="{{ english_url | relative_url }}"
+            lang="en"
+            {% if page.lang == 'en' %}aria-current="page"{% endif %}
+          >English</a>
+          <a
+            href="{{ korean_url | relative_url }}"
+            lang="ko"
+            {% if page.lang == 'ko' %}aria-current="page"{% endif %}
+          >한국어</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="post-main container">
+      <article>
+        <header class="post-header">
+          <p class="eyebrow">{% if page.lang == 'ko' %}글{% else %}Writing{% endif %}</p>
+          <h1 class="post-title">{{ page.title }}</h1>
+          <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+              {% if page.lang == 'ko' %}
+                {{ page.date | date: '%Y년 %-m월 %-d일' }}
+              {% else %}
+                {{ page.date | date: '%B %-d, %Y' }}
+              {% endif %}
+            </time>
+            {% if page.tags.size > 0 %}
+              <ul class="post-tags" aria-label="Tags">
+                {% for tag in page.tags %}
+                  <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </header>
+
+        <div class="post-content">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
